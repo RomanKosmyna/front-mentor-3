@@ -195,9 +195,10 @@ body {
 
 @media (min-width: 740px) {
     .main-container {
+        width: auto;
         max-width: 900px;
         min-height: auto;
-        padding: 1.5rem 1.5rem 1.5rem 3rem;
+        padding: 1.5rem;
         display: flex;
         align-items: center;
         gap: 3rem;
@@ -208,15 +209,32 @@ body {
         }
 
         .information-container {
-            padding: 0;
+            padding: 0 0 0 3rem;
         }
 
         .form-container {
-            padding: 0;
+            padding: 0 0 0 3rem;
         }
 
         .desktop-image-container {
             display: block;
+        }
+
+        .after-subscribe-container {
+            width: 360px;
+            min-height: auto;
+            padding: 1rem;
+
+            .dismiss-btn {
+                margin-top: 1.5rem;
+            }
+
+            @media (min-width: 724px) {
+                .dismiss-btn:hover {
+                    background: linear-gradient(to right, @tomato, @active-state);
+                    box-shadow: -5px 8px 20px rgba(255, 99, 71, 0.5);
+                }
+            }
         }
     }
 }

@@ -1,5 +1,6 @@
 const beforeSubscribeEl = document.querySelector(".before-subscribe-container");
 const afterSubscribeEl = document.querySelector(".after-subscribe-container");
+const desktopImageContainerEl = document.querySelector(".desktop-image-container");
 let userEmail = "";
 
 const handleSubscribe = (e) => {
@@ -27,7 +28,9 @@ const handleSubscribe = (e) => {
 
         beforeSubscribeEl.style.display = "none";
         afterSubscribeEl.style.display = "flex";
-        
+
+        desktopImageContainerEl.style.display = "none";
+
         userEmail = inputEl.value;
         userEmailEl.textContent = userEmail;
     }
@@ -36,4 +39,7 @@ const handleSubscribe = (e) => {
 const dismissMessage = () => {
     beforeSubscribeEl.style.display = "block";
     afterSubscribeEl.style.display = "none";
+ 
+    if (window.innerWidth > 740)
+    desktopImageContainerEl.style.display = "block";
 };
